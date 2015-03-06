@@ -17,6 +17,7 @@ Creates a standard Debian 8 RC1 install
 * Editable in `http/preseed.cfg`
 
 ## Usage
+Build:
 ```
 packer build jessie.json
 ```
@@ -24,8 +25,20 @@ With logging:
 ```
 export PACKER_LOG="yes" && packer build jessie.json
 ```
+* User: `packer`
+* Password: `packer` (Don't forget to change this!)
+* Root Password: `toor` (Don't forget to change this!)
+
+## Build Log
+* [Build Output](build_output.log)
 
 ## TODO / BUGS
-* See issues
+* See [issues](https://github.com/sammcj/packer-qemu-debian-jessie/issues)
 
-https://github.com/sammcj/packer-qemu-debian-jessie
+## Further Reading
+
+* https://www.debian.org/releases/jessie/example-preseed.txt
+* https://www.packer.io/docs/builders/qemu.html
+* https://www.packer.io/docs/provisioners/ansible-local.html
+
+This project: https://github.com/sammcj/packer-qemu-debian-jessie
