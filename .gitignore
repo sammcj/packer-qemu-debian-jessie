@@ -1,5 +1,10 @@
 # Cache objects
 packer_cache/
+iso
 
 # For built boxes
 *.box
+
+# For built images
+**/output-*
+
