@@ -4,12 +4,14 @@ PACKAGES="
 bzip2
 curl
 unzip
+openntpd
 "
 apt-get install -y --no-install-recommends $PACKAGES
 
 UNINSTALL_PKGS="
 nano
 cupsys*
+ntp
 aspell*
 bind9-host
 fdutils
@@ -19,6 +21,9 @@ ppp
 pppoe
 pppoeconf
 pppoeconf
+iamerican
+ibritish
+ispell
 tcsh
 w3m
 smbclient

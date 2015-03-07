@@ -1,5 +1,5 @@
 ## Packer qemu template for Debian 8 (Jessie)
-Creates Debian 8 RC1 qcow2 image using QEMU and KVM
+Creates Debian 8 RC1 minimal qcow2 image using QEMU and KVM
 
 ### Default Configuration
 * 4 Cores
@@ -14,8 +14,8 @@ Creates Debian 8 RC1 qcow2 image using QEMU and KVM
 Defaults can be changed in `http/preseed.cfg` and `jessie.json`
 
 #### Build
-* 7 Minutes from scratch on a i5-3550, 4GB RAM, USB3 Intel 320 SSD (See #5)
-* 704Mb (After reclaiming free space see #3)
+* 5 Minutes from scratch on a i5-3550, 4GB RAM, USB3 Intel 320 SSD (see #5)
+* 462Mb After reclaiming free space (see #3)
 * [Build Output](build_output.log)
 
 ## Usage
