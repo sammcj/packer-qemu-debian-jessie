@@ -22,7 +22,7 @@ Defaults can be changed in `http/preseed.cfg` and `jessie.json`
 1. Edit anything you want to change in `http/preseed.cfg` and `jessie.json`
 2. Build:
 ```bash
-./run.sh
+./build.sh
 ```
 
 ## TODO / BUGS
