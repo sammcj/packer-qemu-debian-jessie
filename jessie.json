@@ -10,7 +10,7 @@
     [
         {
             "name": "jessie",
-            "ssh_wait_timeout": "20m",
+            "ssh_wait_timeout": "15m",
             "type": "qemu",
             "format": "qcow2",
             "accelerator": "kvm",
@@ -50,12 +50,19 @@
 
     "provisioners": [
         {
+            "type": "file",
+            "source": "scripts/zram",
+            "destination": "/home/packer/zram"
+        },
+        {
             "type": "shell",
             "execute_command": "echo '{{user `password`}}' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
             "scripts": [
                 "scripts/packages.sh",
-                "scripts/cleanup.sh"
+                "scripts/cleanup.sh",
+                "scripts/tuning.sh"
             ]
         }
     ]
 }
+

@@ -5,6 +5,9 @@ Creates Debian 8 RC1 minimal qcow2 image using QEMU and KVM
 * 4 Cores
 * 1024MB RAM
 * 10GB Disk
+* ZRAM Enabled
+* IO Scheduler Detection (Deadline if drive is an SSD)
+* Customisable Partitioning
 * Australia/Melbourne locale
 * Defaults to EXT4 on a single logical volume
 * Apt Mirror defaults to Internode Australia
