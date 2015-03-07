@@ -1,36 +1,37 @@
 ## Packer qemu template for Debian 8 (Jessie)
-Creates a standard Debian 8 RC1 install
+Creates Debian 8 RC1 qcow2 image using QEMU and KVM
 
 ### Default Configuration
 * 4 Cores
 * 1024MB RAM
 * 10GB Disk
 * Australia/Melbourne locale
-
-#### Partitioning
 * Defaults to EXT4 on a single logical volume
-* Editable in `http/preseed.cfg` however Debian preseed's partman 'expert' config is painful to say the least
-* Grub installs to /dev/vda which is suitable for qemu/KVM but may need to be changed to sda or xvda for others
+* Everything editable in `http/preseed.cfg` and `jessie.json`
 
 #### Apt Mirror
 * Defaults to Internode Australia
 * Editable in `http/preseed.cfg`
 
+#### Build
+* 9 Minutes from scratch on a i5-3550, 4GB RAM, USB3 connected Sandisk Extreme Pro III SSD (See #5)
+* 704Mb (After reclaiming free space see #3)
+* [Build Output](build_output.log)
+
 ## Usage
-Build:
+1. Edit anything you want to change in `http/preseed.cfg` and `jessie.json`
+2. Build:
 ```
 packer build jessie.json
 ```
-With logging:
+
+* Enable build logging:
 ```
 export PACKER_LOG="yes" && packer build jessie.json
 ```
 * User: `packer`
 * Password: `packer` (Don't forget to change this!)
 * Root Password: `toor` (Don't forget to change this!)
-
-## Build Log
-* [Build Output](build_output.log)
 
 ## TODO / BUGS
 * See [issues](https://github.com/sammcj/packer-qemu-debian-jessie/issues)
