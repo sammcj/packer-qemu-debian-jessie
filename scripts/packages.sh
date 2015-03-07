@@ -1,12 +1,12 @@
 # taken from https://github.com/jakobadam/packer-qemu-templates
 
-PACKAGES="
-bzip2
-curl
-unzip
-openntpd
-"
-apt-get install -y --no-install-recommends $PACKAGES
+#PACKAGES="
+#bzip2
+#curl
+#unzip
+#openntpd
+#"
+#apt-get install -y --no-install-recommends $PACKAGES
 
 UNINSTALL_PKGS="
 nano
