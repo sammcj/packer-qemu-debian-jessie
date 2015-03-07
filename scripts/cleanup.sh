@@ -28,6 +28,10 @@ apt-get -y autoclean
 echo "==> Installed packages"
 dpkg --get-selections | grep -v deinstall
 
+# Remove foreign language man files
+rm -rf /usr/share/man/??
+rm -rf /usr/share/man/??_*
+
 # Remove Bash history
 unset HISTFILE
 rm -f /root/.bash_history

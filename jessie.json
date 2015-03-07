@@ -15,6 +15,7 @@
             "format": "qcow2",
             "accelerator": "kvm",
             "net_device": "virtio-net",
+            "disk_cache": "none",
             "disk_interface": "virtio",
             "headless": "true",
             "disk_size": "{{ user `disk_size`}}",
@@ -52,7 +53,6 @@
             "type": "shell",
             "execute_command": "echo '{{user `password`}}' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
             "scripts": [
-                "scripts/update.sh",
                 "scripts/packages.sh",
                 "scripts/cleanup.sh"
             ]

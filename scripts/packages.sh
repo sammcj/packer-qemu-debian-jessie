@@ -3,7 +3,25 @@
 PACKAGES="
 bzip2
 curl
-sudo
 unzip
 "
-aptitude -y install --without-recommends $PACKAGES
+apt-get install -y --no-install-recommends $PACKAGES
+
+UNINSTALL_PKGS="
+nano
+cupsys*
+aspell*
+bind9-host
+fdutils
+hplip
+mutt
+ppp
+pppoe
+pppoeconf
+pppoeconf
+tcsh
+w3m
+smbclient
+foomatic-filters
+"
+apt-get purge -y $UNINSTALL_PKGS
