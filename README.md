@@ -7,11 +7,12 @@ Creates Debian 8 RC1 qcow2 image using QEMU and KVM
 * 10GB Disk
 * Australia/Melbourne locale
 * Defaults to EXT4 on a single logical volume
-* Everything editable in `http/preseed.cfg` and `jessie.json`
+* Apt Mirror defaults to Internode Australia
+* User: `packer`
+* Password: `packer` (Don't forget to change this!)
+* Root Password: `toor` (Don't forget to change this!)
 
-#### Apt Mirror
-* Defaults to Internode Australia
-* Editable in `http/preseed.cfg`
+Defaults can be changed in `http/preseed.cfg` and `jessie.json`
 
 #### Build
 * 9 Minutes from scratch on a i5-3550, 4GB RAM, USB3 connected Sandisk Extreme Pro III SSD (See #5)
@@ -24,14 +25,10 @@ Creates Debian 8 RC1 qcow2 image using QEMU and KVM
 ```
 packer build jessie.json
 ```
-
-* Enable build logging:
+Optional: enable build logging:
 ```
 export PACKER_LOG="yes" && packer build jessie.json
 ```
-* User: `packer`
-* Password: `packer` (Don't forget to change this!)
-* Root Password: `toor` (Don't forget to change this!)
 
 ## TODO / BUGS
 * See [issues](https://github.com/sammcj/packer-qemu-debian-jessie/issues)
