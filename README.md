@@ -15,7 +15,7 @@ Creates Debian 8 RC1 qcow2 image using QEMU and KVM
 Defaults can be changed in `http/preseed.cfg` and `jessie.json`
 
 #### Build
-* 9 Minutes from scratch on a i5-3550, 4GB RAM, USB3 Intel 320 SSD (See #5)
+* 7 Minutes from scratch on a i5-3550, 4GB RAM, USB3 Intel 320 SSD (See #5)
 * 704Mb (After reclaiming free space see #3)
 * [Build Output](build_output.log)
 
