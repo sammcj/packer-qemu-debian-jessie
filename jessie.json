@@ -51,8 +51,8 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "scripts/zram",
-            "destination": "/home/packer/zram"
+            "source": "scripts/",
+            "destination": "/home/packer/"
         },
         {
             "type": "shell",
