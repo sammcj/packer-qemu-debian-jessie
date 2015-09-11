@@ -20,7 +20,7 @@
             "headless": "true",
             "disk_size": "{{ user `disk_size`}}",
             "qemuargs": [[ "-m", "1024M" ],[ "-smp", "4" ]],
-            "iso_url": "http://debian.anexia.at/debian-cd/current/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso",
+            "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso",
             "iso_checksum": "762eb3dfc22f85faf659001ebf270b4f",
             "iso_checksum_type": "md5",
 
