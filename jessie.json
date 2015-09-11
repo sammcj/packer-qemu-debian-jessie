@@ -2,7 +2,7 @@
     "variables": {
         "user": "packer",
         "password": "packer",
-        "disk_size": 10000,
+        "disk_size": "10000",
         "domain": ""
     },
 
@@ -20,8 +20,8 @@
             "headless": "true",
             "disk_size": "{{ user `disk_size`}}",
             "qemuargs": [[ "-m", "1024M" ],[ "-smp", "4" ]],
-            "iso_url": "http://cdimage.debian.org/cdimage/jessie_di_rc1/amd64/iso-cd/debian-jessie-DI-rc1-amd64-netinst.iso",
-            "iso_checksum": "2ab639aa971279f2cfbe45ea01a51529",
+            "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso",
+            "iso_checksum": "762eb3dfc22f85faf659001ebf270b4f",
             "iso_checksum_type": "md5",
 
             "http_directory": "http",
